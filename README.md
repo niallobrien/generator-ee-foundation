@@ -1,4 +1,4 @@
-# Web app generator [![Build Status](https://secure.travis-ci.org/yeoman/generator-gulp-webapp.svg?branch=master)](http://travis-ci.org/yeoman/generator-gulp-webapp)
+# Foundation asset pipeline for Expression Engine
 
 [Yeoman](http://yeoman.io) generator that scaffolds out a Foundation 5 front-end for Expression Engine using [Gulp](http://gulpjs.com/) for the build process.
 
@@ -16,8 +16,8 @@
 
 ## Getting Started
 
-- Install: `npm install -g generator-gulp-foundation`
-- Run: `yo gulp-foundation` in when starting your new project
+- Install: `npm install -g generator-ee-foundation`
+- Run: `yo ee-foundation` in when starting your new project
 - Set your vhost/server name to `local.ee.dev` in MAMP etc. and point it to the app directory within your new project 
 - Run `gulp watch` when developing.
 - When ready to deploy, run `gulp` and this will generate a `dist` directory (distribution) when will contain your production ready files (this process will be improved in time)
