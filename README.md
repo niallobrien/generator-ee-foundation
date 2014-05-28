@@ -4,14 +4,15 @@
 
 ## Features
 
+* Basically, any changes you make to your html, styles, scripts etc. will be automatically shown without you having to refresh the browser or worry about compiling etc. Welcome to awesome-town my friend! :)
+
+
 * Built-in preview server with BrowserSync *(new)*
 * CSS Autoprefixing *(new)*
 * Automagically compile Sass (via libsass) *(new)*
 * Automagically lint your scripts
 * Awesome Image Optimization (via OptiPNG, pngquant, jpegtran and gifsicle)
 * Automagically wire-up dependencies installed with [Bower](http://bower.io) (when `gulp watch` or `gulp wiredep`)
-
-* Basically, any changes you make to your html, styles, scripts etc. will be automatically shown without you having to refresh the browser or worry about compiling etc. Welcome to awesome-town my friend! :)
 
 ## Getting Started
 
