@@ -1,5 +1,10 @@
-// bower:scss
-@include "../bower_components/foundation/scss/foundation";
-// endbower
+// Modified _settings.scss file from Foundation due to path issues
+@import "settings";
 
-// Custom imports & styles here.
+@import "../bower_components/foundation/scss/foundation";
+@import "../bower_components/foundation/scss/normalize";
+
+// Load small styles and cascade imports
+@import "small";
+
+// Custom styles & imports here.

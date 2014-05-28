@@ -3,4 +3,5 @@ test/gulp-file
 test/sass
 test/slug
 temp/
+.dist
 .idea

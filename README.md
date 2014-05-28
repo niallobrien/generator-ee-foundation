@@ -1,6 +1,6 @@
 # Web app generator [![Build Status](https://secure.travis-ci.org/yeoman/generator-gulp-webapp.svg?branch=master)](http://travis-ci.org/yeoman/generator-gulp-webapp)
 
-[Yeoman](http://yeoman.io) generator that scaffolds out a Foundation 5 front-end web app using [Gulp](http://gulpjs.com/) for the build process.
+[Yeoman](http://yeoman.io) generator that scaffolds out a Foundation 5 front-end for Expression Engine using [Gulp](http://gulpjs.com/) for the build process.
 
 ## Features
 
@@ -10,15 +10,17 @@
 * Automagically lint your scripts
 * Awesome Image Optimization (via OptiPNG, pngquant, jpegtran and gifsicle)
 * Automagically wire-up dependencies installed with [Bower](http://bower.io) (when `gulp watch` or `gulp wiredep`)
-* TODO: Mocha Unit Testing with PhantomJS
-* TODO: Optional - Leaner Modernizr builds *(new)*
 
+* Basically, any changes you make to your html, styles, scripts etc. will be automatically shown without you having to refresh the browser or worry about compiling etc. Welcome to awesome-town my friend! :)
 
 ## Getting Started
 
 - Install: `npm install -g generator-gulp-foundation`
-- Run: `yo gulp-foundation`
-- Run `gulp` for building and `gulp watch` for preview
+- Run: `yo gulp-foundation` in when starting your new project
+- Set your vhost/server name to `local.ee.dev` in MAMP etc. and point it to the app directory within your new project 
+- Run `gulp watch` when developing.
+- When ready to deploy, run `gulp` and this will generate a `dist` directory (distribution) when will contain your production ready files (this process will be improved in time)
+- Hit me up with questions on Twitter: @niall_obrien
 
 
 #### Third-Party Dependencies

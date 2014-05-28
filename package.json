@@ -1,9 +1,9 @@
 {
-  "name": "generator-gulp-foundation",
-  "version": "0.0.3",
+  "name": "generator-ee-foundation",
+  "version": "0.0.1",
   "description": "Scaffold out a Foundation 5 front-end web app using Sass (node-sass) by default",
   "license": "BSD",
-  "repository": "niallobrien/generator-gulp-foundation",
+  "repository": "niallobrien/generator-ee-foundation",
   "author": "Niall O'Brien",
   "main": "app/index.js",
   "engines": {

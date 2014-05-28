@@ -111,6 +111,13 @@ AppGenerator.prototype.mainStylesheet = function () {
   this.copy(css, 'app/styles/' + css);
 };
 
+AppGenerator.prototype.responsiveStylesheets = function () {
+  this.copy('_settings.scss', 'app/styles/_settings.scss');
+  this.copy('small.scss', 'app/styles/small.scss');
+  this.copy('medium.scss', 'app/styles/medium.scss');
+  this.copy('large.scss', 'app/styles/large.scss');
+};
+
 AppGenerator.prototype.writeIndex = function () {
   this.indexFile = this.readFileAsString(path.join(this.sourceRoot(), 'index.html'));
   this.indexFile = this.engine(this.indexFile, this);
