@@ -80,7 +80,7 @@ gulp.task('default', ['clean'], function () {
 
 gulp.task('serve', ['styles'], function () {
     browserSync.init(null, {
-        proxy: "local.ee.dev",
+        proxy: "dev.ee.local",
         debugInfo: false,
         open: false,
         hostnameSuffix: ".xip.io"
