@@ -16,12 +16,13 @@
 
 ## Getting Started
 
-- Install: `npm install -g generator-ee-foundation`
-- Run: `yo ee-foundation` in your new project directory
-- Set your vhost/server name to `dev.ee.local` in MAMP etc. and point it to the `app` directory within your new project 
+- Install Expression Engine into your project directory
+- Set your vhost/server name to `dev.ee.local` in MAMP etc. and point it to your project
+- Install: `npm install generator-ee-foundation -g`
+- Run: `yo ee-foundation` in your project directory
 - Run `gulp watch` when developing.
 - Default styles are included for `small`, `medium` and `large` breakpoints, so style accordingly
-- When ready to deploy, run `gulp` and this will generate a `dist` directory (distribution) when will contain your production ready files (this process will be improved in time)
+- When ready to deploy, run `gulp` and this will generate a `dist` directory (distribution) when will contain your production ready files (this process is currently broken, working on fix)
 - Hit me up with questions on Twitter: @niall_obrien
 
 

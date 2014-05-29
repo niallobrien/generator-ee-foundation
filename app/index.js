@@ -10,23 +10,6 @@ var wiredep = require('wiredep');
 var AppGenerator = module.exports = function Appgenerator(args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
 
-  // setup the test-framework property, gulpfile template will need this
-  this.testFramework = options['test-framework'] || 'mocha';
-
-  // for hooks to resolve on mocha by default
-  options['test-framework'] = this.testFramework;
-
-  // resolved to mocha by default (could be switched to jasmine for instance)
-  this.hookFor('test-framework', {
-    as: 'app',
-    options: {
-      options: {
-        'skip-install': options['skip-install-message'],
-        'skip-message': options['skip-install']
-      }
-    }
-  });
-
   this.options = options;
   this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, '../package.json')));
 };
@@ -99,32 +82,25 @@ AppGenerator.prototype.editorConfig = function () {
   this.copy('editorconfig', '.editorconfig');
 };
 
-AppGenerator.prototype.h5bp = function () {
-  this.copy('favicon.ico', 'app/favicon.ico');
-  this.copy('404.html', 'app/404.html');
-  this.copy('robots.txt', 'app/robots.txt');
-  this.copy('htaccess', 'app/.htaccess');
-};
-
 AppGenerator.prototype.mainStylesheet = function () {
   var css = 'main.scss';
-  this.copy(css, 'app/styles/' + css);
+  this.copy(css, 'assets/styles/' + css);
 };
 
 AppGenerator.prototype.responsiveStylesheets = function () {
-  this.copy('_settings.scss', 'app/styles/_settings.scss');
-  this.copy('small.scss', 'app/styles/small.scss');
-  this.copy('medium.scss', 'app/styles/medium.scss');
-  this.copy('large.scss', 'app/styles/large.scss');
+  this.copy('_settings.scss', 'assets/styles/_settings.scss');
+  this.copy('small.scss', 'assets/styles/small.scss');
+  this.copy('medium.scss', 'assets/styles/medium.scss');
+  this.copy('large.scss', 'assets/styles/large.scss');
 };
 
 AppGenerator.prototype.writeIndex = function () {
-  this.indexFile = this.readFileAsString(path.join(this.sourceRoot(), 'index.html'));
+  this.indexFile = this.readFileAsString(path.join(this.sourceRoot(), 'master.html'));
   this.indexFile = this.engine(this.indexFile, this);
 
   // wire Bootstrap plugins
   if (this.includeFoundation) {
-    var f5 = 'bower_components/foundation/js/foundation/';
+    var f5 = 'assets/bower_components/foundation/js/foundation/';
     this.indexFile = this.appendScripts(this.indexFile, 'scripts/plugins.js', [
       f5 + 'foundation.abide.js',
       f5 + 'foundation.accordion.js',
@@ -149,18 +125,18 @@ AppGenerator.prototype.writeIndex = function () {
   this.indexFile = this.appendFiles({
     html: this.indexFile,
     fileType: 'js',
-    optimizedPath: 'scripts/main.js',
-    sourceFileList: ['scripts/main.js']
+    optimizedPath: 'assets/scripts/main.js',
+    sourceFileList: ['assets/scripts/main.js']
   });
 };
 
 AppGenerator.prototype.app = function () {
-  this.mkdir('app');
-  this.mkdir('app/scripts');
-  this.mkdir('app/styles');
-  this.mkdir('app/images');
-  this.write('app/index.html', this.indexFile);
-  this.write('app/scripts/main.js', 'console.log(\'\\\'Allo \\\'Allo!\');');
+  this.mkdir('assets');
+  this.mkdir('assets/scripts');
+  this.mkdir('assets/styles');
+  this.mkdir('assets/images');
+  this.write('admin/templates/default_site/layouts.group/master.html', this.indexFile);
+  this.write('assets/scripts/main.js', 'console.log(\'\\\'Allo \\\'Allo!\');');
 };
 
 AppGenerator.prototype.install = function () {
@@ -185,16 +161,15 @@ AppGenerator.prototype.install = function () {
       // wire Bower packages to .html
       wiredep({
         bowerJson: bowerJson,
-        directory: 'app/bower_components',
-        exclude: ['bootstrap-sass'],
-        src: 'app/index.html'
+        directory: 'assets/bower_components',
+        src: 'admin/templates/default_site/layouts.group/master.html'
       });
 
       // wire Bower packages to .scss
       wiredep({
         bowerJson: bowerJson,
-        directory: 'app/bower_components',
-        src: 'app/styles/*.scss'
+        directory: 'assets/bower_components',
+        src: 'assets/styles/*.scss'
       });
 
       done();
