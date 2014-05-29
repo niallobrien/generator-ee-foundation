@@ -1,6 +1,6 @@
 {
   "name": "generator-ee-foundation",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Scaffold out a Foundation 5 front-end web app using Sass (node-sass) by default",
   "license": "BSD",
   "repository": "niallobrien/generator-ee-foundation",
