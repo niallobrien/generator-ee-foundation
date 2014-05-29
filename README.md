@@ -20,6 +20,7 @@
 - Set your vhost/server name to `dev.ee.local` in MAMP etc. and point it to your project
 - Install: `npm install generator-ee-foundation -g`
 - Run: `yo ee-foundation` in your project directory
+- Within Expression Egnine, set your master template to `master.html` under `admin/templates/default_site/layouts.group/` which was created by this generator
 - Run `gulp watch` when developing.
 - Default styles are included for `small`, `medium` and `large` breakpoints, so style accordingly
 - When ready to deploy, run `gulp` and this will generate a `dist` directory (distribution) when will contain your production ready files (this process is currently broken, working on fix)
