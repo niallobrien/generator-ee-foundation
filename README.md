@@ -23,7 +23,7 @@
 - Within Expression Egnine, set your master template to `master.html` under `admin/templates/default_site/layouts.group/` which was created by this generator
 - Run `gulp watch` when developing.
 - Default styles are included for `small`, `medium` and `large` breakpoints, so style accordingly
-- When ready to deploy, run `gulp` and this will generate a `dist` directory (distribution) when will contain your production ready files (this process is currently broken, working on fix)
+- When ready to deploy, run `gulp` and this will generate a `dist` directory (distribution) which will contain your production ready files, ready to be deployed
 - Hit me up with questions on Twitter: @niall_obrien
 
 
