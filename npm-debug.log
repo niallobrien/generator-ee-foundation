@@ -1,0 +1,148 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.4.9
+3 info using node@v0.10.28
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /Users/niallobrien/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/var/folders/09/v8tlcmb57cd_cnzjj6w2xn080000gn/T/npm-6841-NfOeHeOh/1401489288175-0.390679371310398/tmp.tgz',
+10 verbose tar pack   '.' ]
+11 verbose tarball /var/folders/09/v8tlcmb57cd_cnzjj6w2xn080000gn/T/npm-6841-NfOeHeOh/1401489288175-0.390679371310398/tmp.tgz
+12 verbose folder .
+13 info prepublish generator-ee-foundation@0.0.8
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /Users/niallobrien/.npm/1f1177db-tar.lock
+16 silly lockFile 49dd5eee-288175-0-390679371310398-tmp-tgz tar:///var/folders/09/v8tlcmb57cd_cnzjj6w2xn080000gn/T/npm-6841-NfOeHeOh/1401489288175-0.390679371310398/tmp.tgz
+17 verbose lock tar:///var/folders/09/v8tlcmb57cd_cnzjj6w2xn080000gn/T/npm-6841-NfOeHeOh/1401489288175-0.390679371310398/tmp.tgz /Users/niallobrien/.npm/49dd5eee-288175-0-390679371310398-tmp-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile 49dd5eee-288175-0-390679371310398-tmp-tgz tar:///var/folders/09/v8tlcmb57cd_cnzjj6w2xn080000gn/T/npm-6841-NfOeHeOh/1401489288175-0.390679371310398/tmp.tgz
+21 silly lockFile 49dd5eee-288175-0-390679371310398-tmp-tgz tar:///var/folders/09/v8tlcmb57cd_cnzjj6w2xn080000gn/T/npm-6841-NfOeHeOh/1401489288175-0.390679371310398/tmp.tgz
+22 verbose tar unpack /var/folders/09/v8tlcmb57cd_cnzjj6w2xn080000gn/T/npm-6841-NfOeHeOh/1401489288175-0.390679371310398/tmp.tgz
+23 silly lockFile cffaf67b-ator-ee-foundation-0-0-8-package tar:///Users/niallobrien/.npm/generator-ee-foundation/0.0.8/package
+24 verbose lock tar:///Users/niallobrien/.npm/generator-ee-foundation/0.0.8/package /Users/niallobrien/.npm/cffaf67b-ator-ee-foundation-0-0-8-package.lock
+25 silly lockFile 49dd5eee-288175-0-390679371310398-tmp-tgz tar:///var/folders/09/v8tlcmb57cd_cnzjj6w2xn080000gn/T/npm-6841-NfOeHeOh/1401489288175-0.390679371310398/tmp.tgz
+26 verbose lock tar:///var/folders/09/v8tlcmb57cd_cnzjj6w2xn080000gn/T/npm-6841-NfOeHeOh/1401489288175-0.390679371310398/tmp.tgz /Users/niallobrien/.npm/49dd5eee-288175-0-390679371310398-tmp-tgz.lock
+27 silly gunzTarPerm modes [ '755', '644' ]
+28 silly gunzTarPerm extractEntry package.json
+29 silly gunzTarPerm extractEntry README.md
+30 silly gunzTarPerm extractEntry app/index.js
+31 silly gunzTarPerm extractEntry app/USAGE
+32 silly gunzTarPerm extractEntry app/templates/gulpfile.js
+33 silly gunzTarPerm extractEntry app/templates/404.html
+34 silly gunzTarPerm extractEntry app/templates/_settings.scss
+35 silly gunzTarPerm extractEntry app/templates/bower.json
+36 silly gunzTarPerm extractEntry app/templates/bowerrc
+37 silly gunzTarPerm extractEntry app/templates/editorconfig
+38 silly gunzTarPerm extractEntry app/templates/favicon.ico
+39 silly gunzTarPerm extractEntry app/templates/gitattributes
+40 silly gunzTarPerm extractEntry app/templates/gitignore
+41 silly gunzTarPerm extractEntry app/templates/_package.json
+42 silly gunzTarPerm extractEntry app/templates/htaccess
+43 silly gunzTarPerm extractEntry app/templates/jshintrc
+44 silly gunzTarPerm extractEntry app/templates/large.scss
+45 silly gunzTarPerm extractEntry app/templates/main.scss
+46 silly gunzTarPerm extractEntry app/templates/master.html
+47 silly gunzTarPerm extractEntry app/templates/medium.scss
+48 silly gunzTarPerm extractEntry app/templates/robots.txt
+49 silly gunzTarPerm extractEntry app/templates/small.scss
+50 silly lockFile cffaf67b-ator-ee-foundation-0-0-8-package tar:///Users/niallobrien/.npm/generator-ee-foundation/0.0.8/package
+51 silly lockFile cffaf67b-ator-ee-foundation-0-0-8-package tar:///Users/niallobrien/.npm/generator-ee-foundation/0.0.8/package
+52 silly lockFile 49dd5eee-288175-0-390679371310398-tmp-tgz tar:///var/folders/09/v8tlcmb57cd_cnzjj6w2xn080000gn/T/npm-6841-NfOeHeOh/1401489288175-0.390679371310398/tmp.tgz
+53 silly lockFile 49dd5eee-288175-0-390679371310398-tmp-tgz tar:///var/folders/09/v8tlcmb57cd_cnzjj6w2xn080000gn/T/npm-6841-NfOeHeOh/1401489288175-0.390679371310398/tmp.tgz
+54 silly lockFile 3a52ce78- .
+55 silly lockFile 3a52ce78- .
+56 silly publish { name: 'generator-ee-foundation',
+56 silly publish   version: '0.0.8',
+56 silly publish   description: 'Scaffold out a Foundation 5 front-end web app using Sass (node-sass) by default',
+56 silly publish   license: 'BSD',
+56 silly publish   repository:
+56 silly publish    { type: 'git',
+56 silly publish      url: 'git://github.com/niallobrien/generator-ee-foundation' },
+56 silly publish   author: { name: 'Niall O\'Brien' },
+56 silly publish   main: 'app/index.js',
+56 silly publish   engines: { node: '>=0.10.0', npm: '>=1.3' },
+56 silly publish   scripts: { test: 'mocha --reporter spec' },
+56 silly publish   files: [ 'app' ],
+56 silly publish   keywords:
+56 silly publish    [ 'yeoman-generator',
+56 silly publish      'web',
+56 silly publish      'app',
+56 silly publish      'front-end',
+56 silly publish      'h5bp',
+56 silly publish      'jquery',
+56 silly publish      'gulp',
+56 silly publish      'foundation',
+56 silly publish      'browsersync',
+56 silly publish      'expression',
+56 silly publish      'engine' ],
+56 silly publish   dependencies:
+56 silly publish    { chalk: '^0.4.0',
+56 silly publish      cheerio: '^0.15.0',
+56 silly publish      wiredep: '^1.4.3',
+56 silly publish      'yeoman-generator': '^0.16.0' },
+56 silly publish   peerDependencies: { yo: '>=1.0.0', 'generator-mocha': '>=0.1.0', gulp: '>=3.5.0' },
+56 silly publish   devDependencies: { mocha: '*' },
+56 silly publish   readme: '# Foundation asset pipeline for Expression Engine\n\n[Yeoman](http://yeoman.io) generator that scaffolds out a Foundation 5 front-end for Expression Engine using [Gulp](http://gulpjs.com/) for the build process.\n\n## Features\n\n* Basically, any changes you make to your html, styles, scripts etc. will be automatically shown without you having to refresh the browser or worry about compiling etc. Welcome to awesome-town my friend! :)\n\n\n* Built-in preview server with BrowserSync *(new)*\n* CSS Autoprefixing *(new)*\n* Automagically compile Sass (via libsass) *(new)*\n* Automagically lint your scripts\n* Awesome Image Optimization (via OptiPNG, pngquant, jpegtran and gifsicle)\n* Automagically wire-up dependencies installed with [Bower](http://bower.io) (when `gulp watch` or `gulp wiredep`)\n\n## Getting Started\n\n- Install Expression Engine into your project directory\n- Set your vhost/server name to `dev.ee.local` in MAMP etc. and point it to your project\n- Install: `npm install generator-ee-foundation -g`\n- Run: `yo ee-foundation` in your project directory\n- Within Expression Egnine, set your master template to `master.html` under `admin/templates/default_site/layouts.group/` which was created by this generator\n- Run `gulp watch` when developing.\n- Default styles are included for `small`, `medium` and `large` breakpoints, so style accordingly\n- When ready to deploy, run `gulp` and this will generate a `dist` directory (distribution) which will contain your production ready files, ready to be deployed\n- Hit me up with questions on Twitter: @niall_obrien\n\n\n#### Third-Party Dependencies\n\n*(HTML/CSS/JS/Images/etc)*\n\nTo install dependencies, run `bower install depName --save` to get the files, then add a `script` or `style` tag to your `index.html` or an other appropriate place.\n\n## Options\n\n* `--skip-install`\n\n  Skips the automatic execution of `bower` and `npm` after scaffolding has finished.\n\n* `--test-framework=<framework>`\n\n  Defaults to `mocha`. Can be switched for another supported testing framework like `jasmine`.\n\n\n## License\n\n[BSD license](http://opensource.org/licenses/bsd-license.php)\n',
+56 silly publish   readmeFilename: 'README.md',
+56 silly publish   bugs: { url: 'https://github.com/niallobrien/generator-ee-foundation/issues' },
+56 silly publish   homepage: 'https://github.com/niallobrien/generator-ee-foundation',
+56 silly publish   _id: 'generator-ee-foundation@0.0.8',
+56 silly publish   _shasum: 'a6322e43a39a401f00a165419868c4900173d9b1',
+56 silly publish   _from: '.' }
+57 verbose url raw generator-ee-foundation
+58 verbose url resolving [ 'https://registry.npmjs.org/', './generator-ee-foundation' ]
+59 verbose url resolved https://registry.npmjs.org/generator-ee-foundation
+60 info trying registry request attempt 1 at 23:34:48
+61 http PUT https://registry.npmjs.org/generator-ee-foundation
+62 http 403 https://registry.npmjs.org/generator-ee-foundation
+63 verbose headers { date: 'Fri, 30 May 2014 22:34:49 GMT',
+63 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+63 verbose headers   'content-type': 'application/json',
+63 verbose headers   'cache-control': 'max-age=1',
+63 verbose headers   'content-length': '5522',
+63 verbose headers   'accept-ranges': 'bytes',
+63 verbose headers   via: '1.1 varnish',
+63 verbose headers   'x-served-by': 'cache-ams4120-AMS',
+63 verbose headers   'x-cache': 'MISS',
+63 verbose headers   'x-cache-hits': '0',
+63 verbose headers   'x-timer': 'S1401489289.195930,VS0,VE784',
+63 verbose headers   'keep-alive': 'timeout=10, max=50',
+63 verbose headers   connection: 'Keep-Alive' }
+64 error publish Failed PUT 403
+65 error Error: forbidden cannot modify pre-existing version: 0.0.8
+65 error old={"name":"generator-ee-foundation","version":"0.0.8","description":"Scaffold out a Foundation 5 front-end web app using Sass (node-sass) by default","license":"BSD","repository":{"type":"git","url":"git://github.com/niallobrien/generator-ee-foundation"},"author":{"name":"Niall O'Brien"},"main":"app/index.js","engines":{"node":">=0.10.0","npm":">=1.3"},"scripts":{"test":"mocha --reporter spec"},"files":["app"],"keywords":["yeoman-generator","web","app","front-end","h5bp","jquery","gulp","foundation","browsersync","expression","engine"],"dependencies":{"chalk":"^0.4.0","cheerio":"^0.15.0","wiredep":"^1.4.3","yeoman-generator":"^0.16.0"},"peerDependencies":{"yo":">=1.0.0","generator-mocha":">=0.1.0","gulp":">=3.5.0"},"devDependencies":{"mocha":"*"},"bugs":{"url":"https://github.com/niallobrien/generator-ee-foundation/issues"},"homepage":"https://github.com/niallobrien/generator-ee-foundation","_id":"generator-ee-foundation@0.0.8","_shasum":"9e4cad716e89e7c84ef9f5acc26dedc9c9743e1c","_from":".","_npmVersion":"1.4.9","_npmUser":{"name":"niallobrien","email":"me@niallobrien.me"},"maintainers":[{"name":"niallobrien","email":"me@niallobrien.me"}],"dist":{"shasum":"9e4cad716e89e7c84ef9f5acc26dedc9c9743e1c","tarball":"http://registry.npmjs.org/generator-ee-foundation/-/generator-ee-foundation-0.0.8.tgz"}}
+65 error new={"name":"generator-ee-foundation","version":"0.0.8","description":"Scaffold out a Foundation 5 front-end web app using Sass (node-sass) by default","license":"BSD","repository":{"type":"git","url":"git://github.com/niallobrien/generator-ee-foundation"},"author":{"name":"Niall O'Brien"},"main":"app/index.js","engines":{"node":">=0.10.0","npm":">=1.3"},"scripts":{"test":"mocha --reporter spec"},"files":["app"],"keywords":["yeoman-generator","web","app","front-end","h5bp","jquery","gulp","foundation","browsersync","expression","engine"],"dependencies":{"chalk":"^0.4.0","cheerio":"^0.15.0","wiredep":"^1.4.3","yeoman-generator":"^0.16.0"},"peerDependencies":{"yo":">=1.0.0","generator-mocha":">=0.1.0","gulp":">=3.5.0"},"devDependencies":{"mocha":"*"},"readme":"# Foundation asset pipeline for Expression Engine\u000a\u000a[Yeoman](http://yeoman.io) generator that scaffolds out a Foundation 5 front-end for Expression Engine using [Gulp](http://gulpjs.com/) for the build process.\u000a\u000a## Features\u000a\u000a* Basically, any changes you make to your html, styles, scripts etc. will be automatically shown without you having to refresh the browser or worry about compiling etc. Welcome to awesome-town my friend! :)\u000a\u000a\u000a* Built-in preview server with BrowserSync *(new)*\u000a* CSS Autoprefixing *(new)*\u000a* Automagically compile Sass (via libsass) *(new)*\u000a* Automagically lint your scripts\u000a* Awesome Image Optimization (via OptiPNG, pngquant, jpegtran and gifsicle)\u000a* Automagically wire-up dependencies installed with [Bower](http://bower.io) (when `gulp watch` or `gulp wiredep`)\u000a\u000a## Getting Started\u000a\u000a- Install Expression Engine into your project directory\u000a- Set your vhost/server name to `dev.ee.local` in MAMP etc. and point it to your project\u000a- Install: `npm install generator-ee-foundation -g`\u000a- Run: `yo ee-foundation` in your project directory\u000a- Within Expression Egnine, set your master template to `master.html` under `admin/templates/default_site/layouts.group/` which was created by this generator\u000a- Run `gulp watch` when developing.\u000a- Default styles are included for `small`, `medium` and `large` breakpoints, so style accordingly\u000a- When ready to deploy, run `gulp` and this will generate a `dist` directory (distribution) which will contain your production ready files, ready to be deployed\u000a- Hit me up with questions on Twitter: @niall_obrien\u000a\u000a\u000a#### Third-Party Dependencies\u000a\u000a*(HTML/CSS/JS/Images/etc)*\u000a\u000aTo install dependencies, run `bower install depName --save` to get the files, then add a `script` or `style` tag to your `index.html` or an other appropriate place.\u000a\u000a## Options\u000a\u000a* `--skip-install`\u000a\u000a  Skips the automatic execution of `bower` and `npm` after scaffolding has finished.\u000a\u000a* `--test-framework=<framework>`\u000a\u000a  Defaults to `mocha`. Can be switched for another supported testing framework like `jasmine`.\u000a\u000a\u000a## License\u000a\u000a[BSD license](http://opensource.org/licenses/bsd-license.php)\u000a","readmeFilename":"README.md","bugs":{"url":"https://github.com/niallobrien/generator-ee-foundation/issues"},"homepage":"https://github.com/niallobrien/generator-ee-foundation","_id":"generator-ee-foundation@0.0.8","_shasum":"a6322e43a39a401f00a165419868c4900173d9b1","_from":".","_npmVersion":"1.4.9","_npmUser":{"name":"niallobrien","email":"me@niallobrien.me"},"maintainers":[{"name":"niallobrien","email":"me@niallobrien.me"}],"dist":{"shasum":"a6322e43a39a401f00a165419868c4900173d9b1","tarball":"http://registry.npmjs.org/generator-ee-foundation/-/generator-ee-foundation-0.0.8.tgz"}}: generator-ee-foundation
+65 error     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:273:14)
+65 error     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:211:65)
+65 error     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:123:22)
+65 error     at Request.EventEmitter.emit (events.js:98:17)
+65 error     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:893:14)
+65 error     at Request.EventEmitter.emit (events.js:117:20)
+65 error     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:844:12)
+65 error     at IncomingMessage.EventEmitter.emit (events.js:117:20)
+65 error     at _stream_readable.js:919:16
+65 error     at process._tickCallback (node.js:419:13)
+66 error If you need help, you may report this *entire* log,
+66 error including the npm and node versions, at:
+66 error     <http://github.com/npm/npm/issues>
+67 error System Darwin 13.2.0
+68 error command "node" "/usr/local/bin/npm" "publish"
+69 error cwd /Users/niallobrien/dev/yeoman-generators/generator-ee-foundation
+70 error node -v v0.10.28
+71 error npm -v 1.4.9
+72 verbose exit [ 1, true ]
