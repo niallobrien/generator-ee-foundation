@@ -33,10 +33,6 @@ AppGenerator.prototype.askFor = function askFor() {
       name: 'Foundation 5',
       value: 'includeFoundation',
       checked: true
-    }, {
-      name: 'Modernizr',
-      value: 'includeModernizr',
-      checked: true
     }]
   }];
 
@@ -50,8 +46,7 @@ AppGenerator.prototype.askFor = function askFor() {
     // manually deal with the response, get back and store the results.
     // we change a bit this way of doing to automatically do this in the self.prompt() method.
     this.includeFoundation = hasFeature('includeFoundation');
-    this.includeModernizr = hasFeature('includeModernizr');
-
+    
     cb();
   }.bind(this));
 };
@@ -100,8 +95,8 @@ AppGenerator.prototype.writeIndex = function () {
 
   // wire Bootstrap plugins
   if (this.includeFoundation) {
-    var f5 = 'assets/bower_components/foundation/js/foundation/';
-    this.indexFile = this.appendScripts(this.indexFile, 'scripts/plugins.js', [
+    var f5 = 'bower_components/foundation/js/foundation/';
+    this.indexFile = this.appendScripts(this.indexFile, 'assets/scripts/plugins.js', [
       f5 + 'foundation.abide.js',
       f5 + 'foundation.accordion.js',
       f5 + 'foundation.alert.js',
@@ -126,7 +121,7 @@ AppGenerator.prototype.writeIndex = function () {
     html: this.indexFile,
     fileType: 'js',
     optimizedPath: 'assets/scripts/main.js',
-    sourceFileList: ['assets/scripts/main.js']
+    sourceFileList: ['scripts/main.js']
   });
 };
 

@@ -10,7 +10,7 @@ var gutil = require('gulp-util');
 var $ = require('gulp-load-plugins')();
 
 gulp.task('styles', function () {
-    return gulp.src('./assets/styles/main.scss')
+    return gulp.src('assets/styles/main.scss')
         .pipe($.sass({errLogToConsole: true}))
         .pipe($.autoprefixer('last 1 version'))
         .pipe(gulp.dest('assets/styles'))
@@ -31,7 +31,7 @@ gulp.task('html', ['styles', 'scripts'], function () {
     var cssFilter = $.filter('**/*.css');
 
     return gulp.src('admin/templates/default_site/**/*.html')
-        .pipe($.useref.assets())
+        .pipe($.useref.assets({searchPath: 'assets'}))
         .pipe(jsFilter)
         .pipe($.uglify())
         .pipe(jsFilter.restore())
@@ -98,7 +98,7 @@ gulp.task('wiredep', function () {
             directory: 'assets/bower_components'
         }))
         .pipe(gulp.dest('assets/styles'));
-    gulp.src('admin/templates/default_site/**/*.html')
+    gulp.src('admin/templates/default_site/layouts.group/master.html')
         .pipe(wiredep({
             directory: 'assets/bower_components'
         }))

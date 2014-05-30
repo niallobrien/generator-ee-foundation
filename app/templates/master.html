@@ -7,18 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
+    <!-- build:css assets/styles/vendor.css -->
+    <link rel="stylesheet" href="bower_components/foundation/css/foundation.css" />
     <!-- endbuild -->
 
-    <!-- build:css({.tmp,app}) styles/main.css -->
-    <link rel="stylesheet" href="../../../assets/styles/main.css">
+    <!-- build:css assets/styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    <% if (includeModernizr) { %>
-    <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="../../../assets/bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild --><% } %>
 </head>
 <body>
         <!--[if lt IE 10]>
@@ -64,10 +59,7 @@
                         <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.<br>
                             At the core we're using Libsass which is an implemention of Sass written in C. Gulp-sass utilises node-sass which in turn utilises Libsass.</p>
                             <h4>Foundation 5</h4>
-                            <p>The most advanced responsive front-end framework in the world.</p><% if (includeModernizr) { %>
-                            <h4>Modernizr</h4>
-                            <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
-                            <% } %>
+                            <p>The most advanced responsive front-end framework in the world.</p>
                         </div>
                     </div>
                 </div>
@@ -76,8 +68,7 @@
                     <h1>'Allo, 'Allo!</h1>
                     <p>You now have</p>
                     <ul>
-                        <li>HTML5 Boilerplate</li><% if (includeModernizr) { %>
-                        <li>Modernizr</li><% } %>
+                        <li>HTML5 Boilerplate</li>
                     </ul>
                 </div>
                 <% } %>
@@ -91,10 +82,13 @@
                     ga('create','UA-XXXXX-X');ga('send','pageview');
                 </script>
 
-                <!-- build:js scripts/vendor.js -->
-
-                <!-- bower:js -->
-                <!-- endbower -->
+                <!-- build:js assets/scripts/vendor.js -->
+                <script src="bower_components/modernizr/modernizr.js"></script>
+                <script src="bower_components/jquery/dist/jquery.js"></script>
+                <script src="bower_components/fastclick/lib/fastclick.js"></script>
+                <script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
+                <script src="bower_components/jquery-placeholder/jquery.placeholder.js"></script>
+                <script src="bower_components/foundation/js/foundation.js"></script>
                 <!-- endbuild -->
             </body>
             </html>
