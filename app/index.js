@@ -95,7 +95,7 @@ AppGenerator.prototype.writeIndex = function () {
 
   // wire Bootstrap plugins
   if (this.includeFoundation) {
-    var f5 = 'bower_components/foundation/js/foundation/';
+    var f5 = 'assets/bower_components/foundation/js/foundation/';
     this.indexFile = this.appendScripts(this.indexFile, 'assets/scripts/plugins.js', [
       f5 + 'foundation.abide.js',
       f5 + 'foundation.accordion.js',
@@ -121,7 +121,7 @@ AppGenerator.prototype.writeIndex = function () {
     html: this.indexFile,
     fileType: 'js',
     optimizedPath: 'assets/scripts/main.js',
-    sourceFileList: ['scripts/main.js']
+    sourceFileList: ['assets/scripts/main.js']
   });
 };
 

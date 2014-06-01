@@ -31,7 +31,7 @@ gulp.task('html', ['styles', 'scripts'], function () {
     var cssFilter = $.filter('**/*.css');
 
     return gulp.src('admin/templates/default_site/**/*.html')
-        .pipe($.useref.assets({searchPath: 'assets'}))
+        .pipe($.useref.assets({searchPath: './'}))
         .pipe(jsFilter)
         .pipe($.uglify())
         .pipe(jsFilter.restore())
