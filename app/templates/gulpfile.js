@@ -11,7 +11,12 @@ var $ = require('gulp-load-plugins')();
 
 gulp.task('styles', function () {
     return gulp.src('assets/styles/main.scss')
-        .pipe($.sass({errLogToConsole: true}))
+        .pipe($.sass({
+            errLogToConsole: true,
+            onError: function(err) {
+                return $.notify().write(err);
+            }
+        }))
         .pipe($.autoprefixer('last 1 version'))
         .pipe(gulp.dest('assets/styles'))
         .pipe(reload({stream:true}))
