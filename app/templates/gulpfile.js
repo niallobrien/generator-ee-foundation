@@ -2,12 +2,32 @@
 // generated on <%= (new Date).toISOString().split('T')[0] %> using <%= pkg.name %> <%= pkg.version %>
 
 var gulp = require('gulp');
+var spawn = require('child_process').spawn;
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var gutil = require('gulp-util');
+var runSequence = require('run-sequence');
+// var sass = require('gulp-ruby-sass');
+var bowerFiles = require('main-bower-files');
 
 // load plugins
 var $ = require('gulp-load-plugins')();
+
+gulp.task('autoreload', function () {
+    // Store current process if any
+     var p;
+     gulp.watch('./gulpfile.js', spawnChildren);
+     // Comment the line below if you start your server by yourslef anywhere else
+     spawnChildren();
+    
+     function spawnChildren(e) {
+       if(p) {
+         p.kill(); 
+       }
+    
+       p = spawn('gulp', ['watch'], {stdio: 'inherit'});
+     }
+});
 
 gulp.task('styles', function () {
     return gulp.src('assets/styles/main.scss')
@@ -28,6 +48,8 @@ gulp.task('scripts', function () {
     return gulp.src('assets/scripts/**/*.js')
         .pipe($.jshint())
         .pipe($.jshint.reporter(require('jshint-stylish')))
+        .pipe($.browserify())
+        .pipe(reload({stream:true}))
         .pipe($.size());
 });
 
@@ -35,7 +57,7 @@ gulp.task('html', ['styles', 'scripts'], function () {
     var jsFilter = $.filter('**/*.js');
     var cssFilter = $.filter('**/*.css');
 
-    return gulp.src('admin/templates/default_site/**/*.html')
+    return gulp.src('admin/templates/default_site/layouts.group/*.html')
         .pipe($.useref.assets({searchPath: './'}))
         .pipe(jsFilter)
         .pipe($.uglify())
@@ -56,42 +78,50 @@ gulp.task('images', function () {
             progressive: true,
             interlaced: true
         })))
-        .pipe(gulp.dest('dist/images'))
+        .pipe(gulp.dest('dist/assets/images'))
         .pipe(reload({stream:true, once:true}))
         .pipe($.size());
 });
 
 gulp.task('fonts', function () {
-    var streamqueue = require('streamqueue');
-    return streamqueue({objectMode: true},
-        $.bowerFiles(),
-        gulp.src('assets/fonts/**/*')
-    )
-        .pipe($.filter('**/*.{eot,svg,ttf,woff}'))
-        .pipe($.flatten())
-        .pipe(gulp.dest('dist/fonts'))
-        .pipe($.size());
+  return gulp.src(require('main-bower-files')().concat('assets/fonts/**/*'))
+    .pipe($.filter('**/*.{eot,svg,ttf,woff}'))
+    .pipe($.flatten())
+    .pipe(gulp.dest('dist/assets/fonts'));
 });
 
-gulp.task('clean', function () {
-    return gulp.src(['assets/styles/main.css', 'dist'], { read: false }).pipe($.clean());
+gulp.task('copy', function () {
+    return gulp.src('admin/templates/default_site/layouts.group/*.html', { base: './'})
+        .pipe(gulp.dest('dist'));
 });
 
-gulp.task('build', ['html', 'images', 'fonts']);
+gulp.task('move', function () {
+    gulp.src('./dist/*.html')
+    .pipe(gulp.dest('./dist/admin/templates/default_site/layouts.group/'))
+
+    gulp.src('./dist/*.html')
+    .pipe($.rimraf())
+});
+
+gulp.task('clean', require('del').bind(null, ['dist']));
+
+gulp.task('build', function() {
+    runSequence('clean', 'wiredep', 'html', 'images', 'fonts', 'move');
+});
 
 gulp.task('default', ['clean'], function () {
     gulp.start('build');
 });
 
-gulp.task('serve', ['styles'], function () {
+gulp.task('serve', ['styles', 'wiredep'], function () {
     browserSync.init(null, {
         proxy: "dev.ee.local",
-        debugInfo: false,
-        open: false,
+        logInfo: 'info',
+        open: 'external',
         hostnameSuffix: ".xip.io"
     }, function (err, bs) {
-        require('opn')(bs.options.url);
-        console.log('Started connect web server on ' + bs.options.url);
+        require('opn');
+        console.log('Started connect web server on ' + bs.options.urls.external);
     });
 });
 
@@ -103,12 +133,15 @@ gulp.task('wiredep', function () {
             directory: 'assets/bower_components'
         }))
         .pipe(gulp.dest('assets/styles'));
+        
     gulp.src('admin/templates/default_site/layouts.group/master.html')
         .pipe(wiredep({
-            directory: 'assets/bower_components'
+            directory: 'assets/bower_components',
+            ignorePath: '../../../../'
         }))
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('admin/templates/default_site/layouts.group/'));
 });
+
 
 gulp.task('watch', ['serve'], function () {
  

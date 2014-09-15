@@ -93,30 +93,6 @@ AppGenerator.prototype.writeIndex = function () {
   this.indexFile = this.readFileAsString(path.join(this.sourceRoot(), 'master.html'));
   this.indexFile = this.engine(this.indexFile, this);
 
-  // wire Bootstrap plugins
-  if (this.includeFoundation) {
-    var f5 = 'assets/bower_components/foundation/js/foundation/';
-    this.indexFile = this.appendScripts(this.indexFile, 'assets/scripts/plugins.js', [
-      f5 + 'foundation.abide.js',
-      f5 + 'foundation.accordion.js',
-      f5 + 'foundation.alert.js',
-      f5 + 'foundation.clearing.js',
-      f5 + 'foundation.dropdown.js',
-      f5 + 'foundation.equalizer.js',
-      f5 + 'foundation.interchange.js',
-      f5 + 'foundation.joyride.js',
-      f5 + 'foundation.js',
-      f5 + 'foundation.magellan.js',
-      f5 + 'foundation.offcanvas.js',
-      f5 + 'foundation.orbit.js',
-      f5 + 'foundation.reveal.js',
-      f5 + 'foundation.slider.js',
-      f5 + 'foundation.tab.js',
-      f5 + 'foundation.tooltip.js',
-      f5 + 'foundation.topbar.js'
-    ]);
-  }
-
   this.indexFile = this.appendFiles({
     html: this.indexFile,
     fileType: 'js',
